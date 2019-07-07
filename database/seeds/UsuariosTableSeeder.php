@@ -16,15 +16,15 @@ class UsuariosTableSeeder extends Seeder
 
         $user = new User;
         $user->name = "Usuario Vendedor";
-        $user->email = "prueba@prueba.com";
-        $user->password = bcrypt('123');
+        $user->email = "administrador@prueba.com";
+        $user->password = bcrypt('123456');
         $user->rol_id = 1;
         $user->save();
 
         $user = new User;
         $user->name = "Usuario Cliente";
         $user->email = "cliente@prueba.com";
-        $user->password = bcrypt('123');
+        $user->password = bcrypt('123456');
         $user->rol_id = 2;
         $user->save();
     }

@@ -19,24 +19,19 @@
 	      <table id="example1" class="table table-bordered table-striped">
 	        <thead>
 	        	<tr>
-	        		<th>Venta</th>
-	        		<th>Usuario</th>	        		
+	        		<th>Venta</th>	        		
 	        		<th>Producto</th>	        		
 	        		<th>Precio</th>
 	        		<th>Cantidad unidad</th>
 	        		<th>Total</th>
 	        		<th>Fecha</th>
-	        		@if(auth()->user()->rol_id == 1)
-	        		    <th>Acciones</th>
-	        		@endif
 	        	</tr>
 	        </thead>
 	        
 	        <tbody>
 	        	@foreach($compras as $compra)	
 	        		<tr>
-	        			<td>{{ $compra->id }}</td>
-	        			<td>{{ $compra->name }}</td>	        			
+	        			<td>{{ $compra->id }}</td>	        			
 	        			<td>{{ $compra->nombreProducto }}</td>
 	        			<td>{{ $compra->precioProducto }}</td>
 	        			<td>{{ $compra->cantidad }}</td>
@@ -52,9 +47,6 @@
 	        			@endphp
 	        			<td>
 	        				{{ $fecha }}
-	        			</td>
-	        			<td>
-	        				<a href="{{ route('compra.eliminarCompra', $compraId) }}" class="btn btn-xs btn-danger"></i>Eliminar</a>
 	        			</td>
 		        		
 	        		</tr>

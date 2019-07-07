@@ -151,10 +151,12 @@ desired effect
             @if(auth()->user()->rol_id == 1)
             <li><a href="{{ route('productos.index') }}"><i class="fa fa-eye"></i>Ver productos</a></li>            
             <li><a href="{{ route('productos.crear') }}"><i class="fa fa-pencil"></i>Registrar productos</a></li>            
-            <li><a href="{{ route('productos.indexCompras') }}"><i class="fa fa-pencil"></i>Ver compras</a></li>
+            <li><a href="{{ route('productos.indexCompras') }}"><i class="fa fa-pencil"></i>Ventas</a></li>
+            <li><a href="{{ route('productos.indexComprasEliminadas') }}"><i class="fa fa-pencil"></i>Ventas eliminadas</a></li>
             @endif
              @if(auth()->user()->rol_id == 2)
             <li><a href="{{ route('productos.comprar') }}"><i class="fa fa-pencil"></i>Comprar productos</a></li>
+            <li><a href="{{ route('productos.indexComprasCliente') }}"><i class="fa fa-pencil"></i>Mis compras</a></li>
             @endif     
           </ul>
         </li>         

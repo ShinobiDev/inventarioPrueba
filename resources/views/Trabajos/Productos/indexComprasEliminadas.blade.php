@@ -1,8 +1,8 @@
 @extends('Admin.layout')
 @section('header')
 	<h1>
-	    Compras
-	    <small> Detalle de las compras</small>
+	    Compras Eliminadas
+	    <small> Detalle de las compras eliminadas</small>
   	</h1>
   	<ol class="breadcrumb">
 	    <li class="active">Compras</li>
@@ -12,7 +12,7 @@
 @section('contenido')
 	<div class="box box-warning col-md-8">
 	    <div class="box-header">
-	      <h3 class="box-title">Detalle de las compras</h3>
+	      <h3 class="box-title">Detalle de las compras eliminadas</h3>
 	    </div>
 	    <!-- /.box-header -->
 	    <div class="box-body col-md-12 bg-success table-responsive">
@@ -26,9 +26,7 @@
 	        		<th>Cantidad unidad</th>
 	        		<th>Total</th>
 	        		<th>Fecha</th>
-	        		@if(auth()->user()->rol_id == 1)
-	        		    <th>Acciones</th>
-	        		@endif
+	        		<th>Eliminada por</th>
 	        	</tr>
 	        </thead>
 	        
@@ -53,9 +51,17 @@
 	        			<td>
 	        				{{ $fecha }}
 	        			</td>
-	        			<td>
-	        				<a href="{{ route('compra.eliminarCompra', $compraId) }}" class="btn btn-xs btn-danger"></i>Eliminar</a>
-	        			</td>
+	        			@php
+	        				if($compra->estado == 2)
+	        				{
+	        					$userElimino = "Administrador";
+	        				}
+	        				if($compra->estado == 3)
+	        				{
+	        					$userElimino = "Cliente";
+	        				}
+	        			@endphp
+	        			<td>{{ $userElimino }}</td>
 		        		
 	        		</tr>
 	        	@endforeach

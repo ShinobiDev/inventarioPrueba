@@ -46,7 +46,7 @@
 		        			
 		        			<div class="modal fade" id="exampleModal{{$producto->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-								<form method="POST" action="{{-- route('productos.update',[$producto->id]) --}}">
+								<form method="POST" action="{{ route('productos.update') }}">
 						    	{{ csrf_field() }}
 							    	<div class="modal-dialog" role="document">
 
@@ -60,17 +60,31 @@
 									      </div>
 
 									      <div class="modal-body">
-
-								        	<div class="form-group col-md-12">
+									      	<input type="hidden" value="{{$producto->id}}" name="idProducto">
+								        	<div class="form-group col-md-6">
 								    			<label>Codigo</label>
 								    			<input name="codigo" class="form-control" value="{{ $producto->codigoProducto }}"  required></input>
 								    		</div>
-								    		<div class="form-group col-md-12">
+								    		<div class="form-group col-md-6">
 								    			<label>Nombre</label>
-								    			<textarea name="nombre" class="form-control" required>{{ $producto->nombreProducto }}</textarea>
-								    			
+								    			<input name="nombre" class="form-control" value="{{ $producto->nombreProducto }}" required></input>	    			
 								    		</div>
-								    		
+								    		<div class="form-group col-md-6">
+								    			<label>Lote</label>
+								    			<input name="lote" class="form-control" value="{{ $producto->loteProducto }}" required></input>	    			
+								    		</div>
+								    		<div class="form-group col-md-6">
+								    			<label>Fecha vencimiento</label>
+								    			<input type="date" name="vencimiento" class="form-control" value="{{ $producto->vencimientoProducto }}" required></input>
+								    		</div>
+								    		<div class="form-group col-md-6">
+								    			<label>Cantidad</label>
+								    			<input name="cantidad" class="form-control" value="{{ $producto->cantidadProducto }}" required></input>	    			
+								    		</div>
+								    		<div class="form-group col-md-6">
+								    			<label>Precio</label>
+								    			<input name="precio" class="form-control" value="{{ $producto->precio }}" required></input>	    			
+								    		</div>
 
 									      </div>
 									      <div class="modal-footer">

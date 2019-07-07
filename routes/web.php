@@ -32,6 +32,8 @@ Route::group(['prefix'=>'Trabajos','namespace'=>'Trabajos','middleware'=>'auth']
 	Route::get('productos/ajaxProducto/{id}','ProductosController@cargarProducto');	
 	/*Ruta para almacenar los productos*/
 	Route::post('productos/almacenar','ProductosController@almacenar')->name('productos.almacenar');
+	/*Ruta para actualizar los productos*/
+	Route::post('productos/update','ProductosController@update')->name('productos.update');
 	
 	/*Ruta para ver los productos*/
 	Route::get('productos/index','ProductosController@index')->name('productos.index');
@@ -43,10 +45,16 @@ Route::group(['prefix'=>'Trabajos','namespace'=>'Trabajos','middleware'=>'auth']
 	/*Ruta para el ajax para cargar la informacion en la compra del producto*/
 	//Route::get('productos/productoSeleccionado/{id}','ProductosController@comprarProducto');
 
-	/*Ruta para ver las compras*/
+	/*Ruta para ver todas las compras*/
 	Route::get('productos/indexCompras','ProductosController@indexCompras')->name('productos.indexCompras');
 	/*Ruta para eliminar las compras*/
-	Route::get('productos/eliminarCompras/{compra_id}','ProductosController@eliminarCompras')->name('compra.eliminarCompra');	
+	Route::get('productos/eliminarCompras/{compraId}','ProductosController@eliminarCompras')->name('compra.eliminarCompra');
+	/*Ruta para eliminar las compra realizada por el cliente*/
+	Route::post('productos/eliminarCompraRealizada','ProductosController@eliminarCompraRealizada')->name('compra.eliminarCompraRealizada');
+	/*Ruta para ver las compras realizadas por cliente*/
+	Route::get('productos/indexComprasCliente','ProductosController@indexComprasCliente')->name('productos.indexComprasCliente');
+	/*Ruta para ver todas las compras eliminadas*/
+	Route::get('productos/indexComprasEliminadas','ProductosController@indexComprasEliminadas')->name('productos.indexComprasEliminadas');	
 
 	
 });
