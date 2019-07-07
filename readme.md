@@ -1,7 +1,7 @@
 
 ## Ingreso y compra de un producto
 
-Esta aplicación permite crear productos y realizar la compra de ellos, esta realizada en Laravel 5.5, PHP 7.2, javascript, boodstrap, MySql, se utilizo el patron de diseño Admin Lte.
+Esta aplicación permite crear productos y realizar la compra de ellos, esta realizada en Laravel 5.5, PHP 7.2, javascript, boodstrap, MySql, se utilizo la plantilla de diseño Admin Lte y la libreria jquey de javasrcipt.
 
 ## Instalación.
 
