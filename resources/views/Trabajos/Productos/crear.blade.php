@@ -36,19 +36,19 @@
 			    		</div>
 			    		<div class="form-group col-md-4">
 			    			<label>Cantidad</label>
-			    			<input type="number" id="candidad" name="cantidad" class="form-control" placeholder="Ingrese el estado o departamento de la Sede" required></input>
+			    			<input type="number" id="candidad" name="cantidad" class="form-control" placeholder="Ingrese la cantidad" required></input>
 			    		</div>
 			    		<div class="form-group col-md-4">
 			    			<label>Numero de lote</label>
-			    			<input type="number" id="lote" name="lote" class="form-control" placeholder="Ingrese la ciudad de la Sede" required></input>
+			    			<input type="number" id="lote" name="lote" class="form-control" placeholder="Ingrese el lote" required></input>
 			    		</div>
 			    		<div class="form-group col-md-4">
 			    			<label>Fecha vencimiento</label>
-			    			<input type="date" id="vencimiento" min="{{ $hoy }}" name="fechaVencimiento" class="form-control" placeholder="Ingrese la dirección de la Sede" required></input>
+			    			<input type="date" id="vencimiento" min="{{ $hoy }}" name="fechaVencimiento" class="form-control" placeholder="Ingrese la fecha" required></input>
 			    		</div>
 			    		<div class="form-group col-md-4">
 			    			<label>Precio</label>
-			    			<input name="precio" id="precio" class="form-control" placeholder="Ingrese el telefono de la Sede" required></input>
+			    			<input name="precio" id="precio" class="form-control" placeholder="Ingrese el precio" required></input>
 			    		</div>
 			    		<div class="form-group">
 			    			<button type="submit" class="btn btn-success col-md-2 col-md-offset-5">Actualizar</button>
