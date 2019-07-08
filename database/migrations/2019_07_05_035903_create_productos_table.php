@@ -20,7 +20,7 @@ class CreateProductosTable extends Migration
             $table->integer('cantidadProducto');
             $table->integer('loteProducto');
             $table->date('vencimientoProducto');
-            $table->float('precio');
+            $table->decimal('precio');
             $table->timestamps();
         });
     }

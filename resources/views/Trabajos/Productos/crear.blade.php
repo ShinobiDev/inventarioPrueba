@@ -48,7 +48,7 @@
 			    		</div>
 			    		<div class="form-group col-md-4">
 			    			<label>Precio</label>
-			    			<input name="precio" id="precio" class="form-control" placeholder="Ingrese el precio" required></input>
+			    			<input type="number" name="precio" id="precio" class="form-control" placeholder="Ingrese el precio" required></input>
 			    		</div>
 			    		<div class="form-group">
 			    			<button type="submit" class="btn btn-success col-md-2 col-md-offset-5">Actualizar</button>
