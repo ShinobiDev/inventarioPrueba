@@ -5,9 +5,19 @@ Esta aplicación permite crear productos y realizar la compra de ellos, esta rea
 
 ## Instalación.
 
-Recuerde crear el archivo .env para ello se cuenta con el archivo .env.example, recuerde utilizar la información de la base de datos, el usuario y la contraseña de la base de datos con la que vaya a conectar la aplicación.  
+accedemos a la consola y escribimos las siguientes lineas de comando.
 
-Puede correr la migración o utilizar el archivo en la carpeta BD.
+composer install
+
+Recuerde modificar el archivo .env para ello se cuenta con el archivo .env.example, recuerde utilizar la información de la base de datos, el usuario y la contraseña de la base de datos con la que vaya a conectar la aplicación.  
+
+luego creamos la api key con la siguiente linea de comando 
+
+php artisan key:generate
+
+Puede correr la migración o utilizar el archivo en la carpeta BD. Para ello accedemos a la consola y escribimos las siguientes lineas de comando.
+
+php artisan migrate:refresh --seed
 
 ## Pasos adicionales en LINUX
 
