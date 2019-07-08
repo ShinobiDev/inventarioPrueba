@@ -65,7 +65,7 @@
 		/*Petición*/
 		function cargar_producto(e){
 				
-				peticion_ajax("GET",'pruebaInventario/public/Trabajos/productos/ajaxProducto/'+e.value,{},function(respuesta_servidor){
+				peticion_ajax("GET",'inventarioPrueba/public/Trabajos/productos/ajaxProducto/'+e.value,{},function(respuesta_servidor){
 					cargarProductos(respuesta_servidor);
 				},function(e){
 					console.log(e);
