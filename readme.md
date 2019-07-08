@@ -1,45 +1,48 @@
 
 ## Ingreso y compra de un producto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+Esta aplicación permite crear productos y realizar la compra de ellos, esta realizada en Laravel 5.5, PHP 7.2, javascript, boodstrap, MySql, se utilizo la plantilla de diseño Admin Lte y la libreria jquey de javasrcipt. 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Instalación.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+accedemos a la consola desde la ubicación donde guardamos el proyecto y escribimos las siguientes lineas de comando.
 
-## Learning Laravel
+composer install
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+Recuerde modificar el archivo .env para ello se cuenta con el archivo .env.example, recuerde utilizar la información de la base de datos, el usuario y la contraseña de la base de datos con la que vaya a conectar la aplicación.  
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+luego creamos la api key con la siguiente linea de comando 
 
-## Laravel Sponsors
+php artisan key:generate
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+Puede correr la migración o utilizar el archivo en la carpeta BD. Para ello accedemos a la consola y escribimos las siguientes lineas de comando.
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
+php artisan migrate:refresh --seed  
 
-## Contributing
+## Pasos adicionales en LINUX
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Es necesario otorgar permisos a las carpetas de storage y storage/logs, accedemos a la consola y escribimos las siguientes lineas de comando.
 
-## Security Vulnerabilities
+sudo chmod 777 -R storage
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+cd storage
 
-## License
+sudo chmod 777 -R logs  
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+## Roles
+
+Actualmente la aplicación cuenta con 2 usuarios:
+
+- Administrador - administrador@prueba.com
+- Cliente - cliente@prueba.com
+La clave de acceso para los dos usuarios es: 123456 
+
+## Rol Administrador
+
+Con este rol se podrá realizar la creación de los productos, así como la actualización de los mismos, ademas de poder ver las ventas realizadas y eliminarlas.  
+
+## Rol Cliente
+
+Con este rol podrá realizar la compra de productos, cancelar la compra y ver las compras realiadas. 
+
+
