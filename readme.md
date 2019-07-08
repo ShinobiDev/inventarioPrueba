@@ -5,7 +5,7 @@ Esta aplicación permite crear productos y realizar la compra de ellos, esta rea
 
 ## Instalación.
 
-accedemos a la consola y escribimos las siguientes lineas de comando.
+accedemos a la consola desde la ubicación donde guardamos el proyecto y escribimos las siguientes lineas de comando.
 
 composer install
 
