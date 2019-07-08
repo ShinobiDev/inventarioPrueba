@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 07-07-2019 a las 19:41:07
+-- Tiempo de generación: 07-07-2019 a las 20:10:20
 -- Versión del servidor: 5.7.26-0ubuntu0.18.04.1
 -- Versión de PHP: 7.2.19-0ubuntu0.18.04.1
 
@@ -90,14 +90,14 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(87, '2014_10_12_000000_create_users_table', 1),
-(88, '2014_10_12_100000_create_password_resets_table', 1),
-(89, '2019_07_05_035847_create_rols_table', 1),
-(90, '2019_07_05_035903_create_productos_table', 1),
-(91, '2019_07_05_040107_create_categorias_table', 1),
-(92, '2019_07_05_183825_create_compras_table', 1),
-(93, '2019_07_06_033705_create_lotes_table', 1),
-(94, '2019_07_06_033825_create_historial_lotes_table', 1);
+(95, '2014_10_12_000000_create_users_table', 1),
+(96, '2014_10_12_100000_create_password_resets_table', 1),
+(97, '2019_07_05_035847_create_rols_table', 1),
+(98, '2019_07_05_035903_create_productos_table', 1),
+(99, '2019_07_05_040107_create_categorias_table', 1),
+(100, '2019_07_05_183825_create_compras_table', 1),
+(101, '2019_07_06_033705_create_lotes_table', 1),
+(102, '2019_07_06_033825_create_historial_lotes_table', 1);
 
 -- --------------------------------------------------------
 
@@ -119,7 +119,7 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `productos` (
   `id` int(10) UNSIGNED NOT NULL,
-  `codigoProducto` int(11) NOT NULL,
+  `codigoProducto` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nombreProducto` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cantidadProducto` int(11) NOT NULL,
   `loteProducto` int(11) NOT NULL,
@@ -163,8 +163,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `rol_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Usuario Vendedor', 'administrador@prueba.com', '$2y$10$8zN7v9VT9NMADvNKyOq88uoySEPyOX1gYgM9aCprk6uwX8BBCWZku', 1, NULL, '2019-07-08 04:40:56', '2019-07-08 04:40:56'),
-(2, 'Usuario Cliente', 'cliente@prueba.com', '$2y$10$hXPax0If.Y0.Tbc0CfYXe.4QoQNdLUWozULsHL6HAVkvgijHl59Ly', 2, NULL, '2019-07-08 04:40:56', '2019-07-08 04:40:56');
+(1, 'Usuario Vendedor', 'administrador@prueba.com', '$2y$10$oas2JxbpSdaqenMhsXDvBuIWaxvx.8seOfiQJV5xSJQj9py8grIae', 1, NULL, '2019-07-08 05:10:07', '2019-07-08 05:10:07'),
+(2, 'Usuario Cliente', 'cliente@prueba.com', '$2y$10$qspvBfbm/XzzmRgc8YeY1.B21EWE6ZW6ZxRMCwbjJX7WtmLpaLaGS', 2, NULL, '2019-07-08 05:10:07', '2019-07-08 05:10:07');
 
 --
 -- Índices para tablas volcadas
@@ -253,7 +253,7 @@ ALTER TABLE `lotes`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
